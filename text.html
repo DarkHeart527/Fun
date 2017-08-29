@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <style>
+      p {
+       animation: 3s main infinite;
+       font-size: 50px;
+      }
+      @keyframes main{
+       0% {color: white}
+       25% {color: blue}
+       50% {color: red}
+       75% {color: lightgreen}
+       100% {color: white}
+      }
+    </style>
+    <script>
+      setTimeout( function() {
+        function setup() {
+          document.getElementsByTagName('button')[0].onclick = function() {
+            var info = document.getElementsByTagName('textarea')[0].value;
+            var p = document.getElementsByTagName('p')[0].innerHTML = info;
+          }
+        }
+        setup();
+      }, 1000);
+    </script>
+    <title>Text - Fun</title>
+  </head>
+  <body>
+    <textarea></textarea>
+    <button>Submit</button>
+    <p></p>
+  </body>
+</html>
